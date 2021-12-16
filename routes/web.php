@@ -43,14 +43,12 @@ Route::prefix('customer')->group(function () {
     });
 
     Route::post('store', function () {
-        // Xử lý lưu dữ liệu tạo khách hàng thong qua phương thức POST từ form
     });
 
     Route::get('{id}/show', function () {
     });
 
     Route::get('{id}/edit', function () {
-        // Hiển thị Form chỉnh sửa thông tin khách hàng
     });
 
     Route::patch('{id}/update', function () {
