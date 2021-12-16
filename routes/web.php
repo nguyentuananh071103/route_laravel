@@ -32,3 +32,34 @@ Route::get('/{timezone?}', function ($timezone = null) {
     }
     return view('index');
 });
+
+
+Route::prefix('customer')->group(function () {
+    Route::get('index', function () {
+        return view('modules.customer.index');
+    });
+
+    Route::get('create', function () {
+    });
+
+    Route::post('store', function () {
+        // Xử lý lưu dữ liệu tạo khách hàng thong qua phương thức POST từ form
+    });
+
+    Route::get('{id}/show', function () {
+    });
+
+    Route::get('{id}/edit', function () {
+        // Hiển thị Form chỉnh sửa thông tin khách hàng
+    });
+
+    Route::patch('{id}/update', function () {
+    });
+
+    Route::delete('{id}', function () {
+    });
+});
+
+Route::get('index', function () {
+    return view('modules.customer.index');
+});
